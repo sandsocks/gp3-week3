@@ -24,13 +24,13 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0)) 
-        {
-            DamagePowerUp_FeedingFrenzy();
-        }
-    }
+    //void Update()
+    //{
+    //   if (Input.GetKeyDown(KeyCode.Mouse0)) 
+    //   {
+    //        DamagePowerUp_FeedingFrenzy();
+    //   }
+    //}
 
     private void OnValidate()
     {
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void DamagePowerUp_FeedingFrenzy()
+    public void DamagePowerUp_FeedingFrenzy()
     {
         PowerUps powerUps = new();
         finalPlayerDamage += powerUps.FeedingFrenzy;
