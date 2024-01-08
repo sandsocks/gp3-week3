@@ -26,3 +26,22 @@ public class DamageSystem
         set { damage_RocketLauncher = value; }
     }
 }
+
+public class PowerUps
+{
+    //Base Damage Powerup
+    float feedingFrenzy = 20;
+    public float FeedingFrenzy
+    {
+        get { return feedingFrenzy; }
+        set { feedingFrenzy = value; }
+    }
+
+    //Percentage Damage Powerup
+    float wellFed = 30;
+    public float WellFed
+    {
+        get { return wellFed; }
+        set { wellFed = value; }
+    }
+}
