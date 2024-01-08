@@ -10,9 +10,18 @@ public class GameManagerEditor : Editor
     {
         DrawDefaultInspector();
         GameManager gameManager = (GameManager)target;
-        if(GUILayout.Button("FeedingFrenzy"))
+
+        //if (GUILayout.Button("Reset"))
+        //{
+        //    gameManager.ResetValues();
+        //}
+        if (GUILayout.Button("Feeding Frenzy"))
         {
             gameManager.DamagePowerUp_FeedingFrenzy();
+        }
+        if (GUILayout.Button("Well Fed"))
+        {
+            gameManager.DamagePowerUp_WellFed();
         }
     }
 }

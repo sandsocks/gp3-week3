@@ -17,6 +17,12 @@ public class GameManager : MonoBehaviour
     [Header("Equipped Weapon")]
     public EquippedWeapon eWeapon;
 
+    [Header("Experience")]
+    public float expToAdd;
+    public float maxXP;
+    public float currentXP;
+    public int playerLevel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,5 +64,12 @@ public class GameManager : MonoBehaviour
     {
         PowerUps powerUps = new();
         finalPlayerDamage += powerUps.FeedingFrenzy;
+    }
+
+    public void DamagePowerUp_WellFed()
+    {
+        PowerUps powerUps = new();
+        float powerUpPlayerDamage = (finalPlayerDamage * (powerUps.WellFed / 1000));
+        finalPlayerDamage = powerUpPlayerDamage + finalPlayerDamage;
     }
 }
