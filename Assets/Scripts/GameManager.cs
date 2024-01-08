@@ -72,4 +72,26 @@ public class GameManager : MonoBehaviour
         float powerUpPlayerDamage = (finalPlayerDamage * (powerUps.WellFed / 1000));
         finalPlayerDamage = powerUpPlayerDamage + finalPlayerDamage;
     }
+
+    public void ResetValues()
+    {
+        DamageSystem weapon = new DamageSystem();
+        switch (eWeapon)
+        {
+            case EquippedWeapon.AK47:
+                finalPlayerDamage = basePlayerDamage + weapon.Damage_AK47;
+                break;
+
+            case EquippedWeapon.DessertEagle:
+                finalPlayerDamage = basePlayerDamage + weapon.Damage_DessertEagle;
+                break;
+
+            case EquippedWeapon.RocketLauncher:
+                finalPlayerDamage = basePlayerDamage + weapon.Damage_RocketLauncher;
+                break;
+
+            default:
+                break;
+        }
+    }
 }
